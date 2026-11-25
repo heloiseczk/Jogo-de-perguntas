@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta do Saber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">🎡 Roleta<span> do Saber</span></a>
+        <div class="nav-info">🧠 Aprender também é divertido!</div>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="welcome">
+        <span class="tag">DESAFIO DO CONHECIMENTO</span>
+
+        <h1>Gire a roleta e<br><span>teste sua inteligência!</span></h1>
+
+        <p>
+            Responda perguntas de diferentes matérias escolares,
+            acumule pontos e mostre tudo o que você sabe!
+        </p>
+    </section>
+
+    <!-- PLACAR -->
+
+    <section class="scoreboard">
+
+        <div class="score-card">
+            <span>🏆</span>
+            <div>
+                <small>PONTUAÇÃO</small>
+                <h2 id="score">0</h2>
+            </div>
+        </div>
+
+        <div class="score-card">
+            <span>✅</span>
+            <div>
+                <small>ACERTOS</small>
+                <h2 id="correct">0</h2>
+            </div>
+        </div>
+
+        <div class="score-card">
+            <span>❌</span>
+            <div>
+                <small>ERROS</small>
+                <h2 id="wrong">0</h2>
+            </div>
+        </div>
+
+        <div class="score-card">
+            <span>🔥</span>
+            <div>
+                <small>SEQUÊNCIA</small>
+                <h2 id="streak">0</h2>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ÁREA DO JOGO -->
+
+    <section class="game-area">
+
+        <div class="roulette-area">
+
+            <h2>🎡 Roleta das matérias</h2>
+            <p>Gire e descubra seu próximo desafio!</p>
+
+            <div class="wheel-container">
+
+                <div class="pointer">▼</div>
+
+                <div class="wheel" id="wheel">
+
+                    <div class="wheel-label label-0">📐<small>Matemática</small></div>
+                    <div class="wheel-label label-1">📖<small>Português</small></div>
+                    <div class="wheel-label label-2">🌎<small>Geografia</small></div>
+                    <div class="wheel-label label-3">🔬<small>Ciências</small></div>
+                    <div class="wheel-label label-4">🏛️<small>História</small></div>
+                    <div class="wheel-label label-5">🇬🇧<small>Inglês</small></div>
+
+                    <div class="wheel-center">GIRE!</div>
+
+                </div>
+            </div>
+
+            <button class="spin-button" id="spinButton">
+                🎲 GIRAR A ROLETA
+            </button>
+
+            <p class="wheel-message" id="wheelMessage">
+                Boa sorte no desafio!
+            </p>
+
+        </div>
+
+        <!-- PERGUNTA -->
+
+        <div class="question-area" id="questionArea">
+
+            <div class="question-header">
+                <span class="question-tag" id="subject">📚 SUA PERGUNTA</span>
+                <span class="timer">⏱️ <span id="timer">20</span>s</span>
+            </div>
+
+            <div id="questionContent" class="question-content">
+
+                <div class="question-icon">🤔</div>
+
+                <h2>Preparado para jogar?</h2>
+
+                <p>
+                    Clique em girar a roleta para receber
+                    uma pergunta surpresa!
+                </p>
+
+            </div>
+
+            <div id="answers" class="answers"></div>
+
+            <div id="feedback" class="feedback"></div>
+
+            <button id="nextButton" class="next-button" disabled>
+                PRÓXIMA RODADA →
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- REGRAS -->
+
+    <section class="rules">
+
+        <h2>📋 Como jogar?</h2>
+
+        <div class="rules-grid">
+
+            <div class="rule-card">
+                <span>01</span>
+                <h3>Gire a roleta</h3>
+                <p>Descubra qual matéria será sorteada.</p>
+            </div>
+
+            <div class="rule-card">
+                <span>02</span>
+                <h3>Responda</h3>
+                <p>Escolha uma das quatro alternativas.</p>
+            </div>
+
+            <div class="rule-card">
+                <span>03</span>
+                <h3>Ganhe pontos</h3>
+                <p>Acertou? Ganhe 10 pontos!</p>
+            </div>
+
+            <div class="rule-card">
+                <span>04</span>
+                <h3>Seja campeão</h3>
+                <p>Responda o máximo de perguntas corretamente!</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESULTADO -->
+
+    <div class="modal" id="resultModal">
+
+        <div class="modal-content">
+
+            <div class="trophy">🏆</div>
+
+            <h2>Fim de jogo!</h2>
+
+            <p>Confira seu resultado:</p>
+
+            <h1 id="finalScore">0 pontos</h1>
+
+            <div class="final-stats">
+                <span>✅ Acertos: <b id="finalCorrect">0</b></span>
+                <span>❌ Erros: <b id="finalWrong">0</b></span>
+            </div>
+
+            <button id="restartButton" class="spin-button">
+                🔄 JOGAR NOVAMENTE
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>🎓 ROleta do Saber | Aprender é uma aventura!</p>
+    <small>Desenvolvido com HTML, CSS e JavaScript.</small>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
